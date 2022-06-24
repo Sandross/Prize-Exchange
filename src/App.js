@@ -1,9 +1,11 @@
-function App() {
-  return (
-    <div className="App">
-    <h1> RadarFit Prize Exchange</h1>
-    </div>
-  );
-}
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Router from './routes/index.routes'
 
-export default App;
+export default function App() {
+    return (
+      <BrowserRouter>
+        <Router/>
+      </BrowserRouter>
+    );
+  }
