@@ -1,13 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
+import  { products } from  '../../mock'
 
 const radarFitSlice = createSlice({
     name: 'radarFit',
     initialState: {
-        products: [],
+        wallet: 1200,
+        products: products,
         cartItens: [{
-            name: 'Pão',
-            id: 1,
-            price: 'R$5,99'
         }],
     }, reducers: {
         addItens: (prevState, action) => {

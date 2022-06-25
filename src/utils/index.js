@@ -1,0 +1,4 @@
+saveOnLocalStorage = () => {
+    localStorage.setItem
+  }
+  
