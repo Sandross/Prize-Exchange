@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 :root {
   --body-bg-color: #22212C;
   --text-color: #837E9F;
@@ -24,4 +24,6 @@ html {
     font-size: 87.5%;
   }
 }
-`
+`;
+
+export default GlobalStyle;

@@ -28,7 +28,7 @@ h2 {
 * {
   color: white;
 }
-`
+`;
 
 export const CartItemCard = styled.div`
   display: flex;
@@ -37,7 +37,7 @@ export const CartItemCard = styled.div`
   border: 2px solid  #4d2187;
   border-radius: 8px;
   overflow: hidden;
-`
+`;
 
 export const CartItemsPrice = styled.p`
   font-size: 0.8rem;
@@ -48,7 +48,7 @@ export const CartItemsPrice = styled.p`
   margin-bottom: 10px;
   margin-top: 10px;
   text-align: center;
-`
+`;
 export const CartItemsTitle = styled.h4`
   font-size: 0.8rem;
   font-weight: 600;
@@ -56,9 +56,9 @@ export const CartItemsTitle = styled.h4`
   margin: 0;
   padding: 0;
   margin: 5px;
-`
+`;
 export const CartItemImage = styled.img`
-`
+`;
 export const CartItemTools = styled.div`
   min-width: 60px;
   display: flex;
@@ -72,7 +72,7 @@ export const CartItemTools = styled.div`
       background: none;
     }
   }
-`
+`;
 export const CardRemoveBtn = styled(FaTrashAlt)`
   background-color: #4d2187;
   color: #4d2187;
@@ -81,7 +81,7 @@ export const CardRemoveBtn = styled(FaTrashAlt)`
   width: 30px;
   height: 30px;
   border-radius: 5px; 
-`
+`;
 
 export const moreLessBtns = styled.button`
   margin-left: 5px;
@@ -95,7 +95,7 @@ export const moreLessBtns = styled.button`
   &:hover {
     color: #4d2187;
   }
-`
+`;
 
 export const IconBtn = styled.button`
   background-color: #4d2187;
@@ -107,4 +107,4 @@ export const IconBtn = styled.button`
   &:hover {
     color: #4d2187;
   }
-`
+`;

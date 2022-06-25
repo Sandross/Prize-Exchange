@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const ProductCardContainer = styled.div`
   text-decoration: none;
   display: flex;
@@ -39,4 +38,3 @@ export const ProductImage = styled.div`
     transform: scale(1.1);
   }
 `;
-

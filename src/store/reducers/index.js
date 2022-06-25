@@ -54,7 +54,7 @@ const radarFitSlice = createSlice({
       cartItems: state.cartItems.filter((elem) => elem.id !== action.payload),
     }),
 
-    updateTotal: (state, _action) => {
+    updateTotal: (state) => {
       const newValue = state.cartItems.reduce((acc, value) => acc + value.price * value.qty, 0);
       return { ...state, total: newValue };
     },

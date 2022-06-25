@@ -53,18 +53,18 @@ export const Loginbuttom = styled.button`
   white-space: nowrap;
   margin-top:35px;
   margin-bottom: 10px;
-`
+`;
 export const ProductTitle = styled.h2`
 text-align: center;
 margin-top:18%;
 margin-bottom: 8%;
-`
+`;
 export const ProductForm = styled.form`
 display: flex;
 flex-direction: column;
 align-items: center;
 position: relative;
-`
+`;
 
 export const LoginInput = styled.input`
 margin-top:10px;
@@ -73,4 +73,4 @@ height: 30px;
 border-radius: 6px;
 padding-left: 6px;
 
-`
+`;

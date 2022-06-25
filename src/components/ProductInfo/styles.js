@@ -51,4 +51,4 @@ export const ButtonCart = styled.button`
     box-shadow: 0 0 2px 2px gray;
     font-weight: 600;
   }
-`
+`;
