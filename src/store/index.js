@@ -1,6 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
-import radarFit from './reducers'
+import { configureStore } from '@reduxjs/toolkit';
+import radarFit from './reducers';
 
-export default configureStore({ reducer: {
-    radarFit
-}})
+export default configureStore({
+  reducer: {
+    radarFit,
+  },
+});
