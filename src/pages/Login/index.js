@@ -18,7 +18,7 @@ export default function Login() {
         { errors.password && <p>{errors.password.message}</p>}
         <form
         onSubmit={ handleSubmit((data) => 
-            navigate('/store'))}
+            navigate('/home'))}
         >
           <div>
             <input

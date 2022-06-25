@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import radarFitSlice from './reducers'
+import radarFit from './reducers'
 
 export default configureStore({ reducer: {
-    radarFitSlice
+    radarFit
 }})

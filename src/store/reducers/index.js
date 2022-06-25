@@ -4,13 +4,17 @@ const radarFitSlice = createSlice({
     name: 'radarFit',
     initialState: {
         products: [],
-        cartItens: [],
+        cartItens: [{
+            name: 'Pão',
+            id: 1,
+            price: 'R$5,99'
+        }],
     }, reducers: {
         addItens: (prevState, action) => {
-            prevState.products.push(action.payload)
+            prevState.cartItens.push(action.payload)
         },
     }
 })
 
-export const { addItens } = radarFitSlice;
-export default radarFitSlice;
+export const { addItens } = radarFitSlice.actions;
+export default radarFitSlice.reducer;
