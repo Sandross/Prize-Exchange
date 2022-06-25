@@ -19,17 +19,16 @@ export const ProductCardContainer = styled.div`
   -o-background-size: contain;
 `;
 
-export const SecondProduct = styled.div`
- width: 400px;
- height: 350px;
- margin-top: 25vh;
- /* margin-right: 10vh; */
- border-radius: 3vh;
-background-color:#1C1C1C;
-border: 2px solid black;
+export const FormLoginContainer = styled.section`
+  width: 400px;
+  height: 350px;
+  margin-top: 25vh;
+  border-radius: 3vh;
+  background-color:#1C1C1C;
+  border: 2px solid black;
 `;
 
-export const Productbuttom = styled.button`
+export const Loginbuttom = styled.button`
   appearance: none;
   background-color: #A356FB;
   border: 1px solid rgba(27, 31, 35, .15);
@@ -67,6 +66,11 @@ align-items: center;
 position: relative;
 `
 
-export const ProductInput = styled.input`
-margin-top:10px
+export const LoginInput = styled.input`
+margin-top:10px;
+width: 70%;
+height: 30px;
+border-radius: 6px;
+padding-left: 6px;
+
 `

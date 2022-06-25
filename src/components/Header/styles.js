@@ -8,30 +8,29 @@ export const ProductHeader = styled.header`
   width: 100%;
   display: flex;
   align-content: center;
+  align-items:center;
   justify-content:space-around;
 `
+
 export const ProductImage = styled.img` 
  width: 5%;
  height: 25px;
- margin-top: 1%;
- filter: brightness(0) saturate(100%) invert(32%) sepia(70%) saturate(5991%) hue-rotate(258deg) brightness(102%) contrast(96%);
-`
-export const cartIcon = styled(FaCartPlus)`
- width: 25px;
- height: 25px;
- margin-top: 1.2%;
  filter: brightness(0) saturate(100%) invert(32%) sepia(70%) saturate(5991%) hue-rotate(258deg) brightness(102%) contrast(96%);
 `
 
-export const UserLogged = styled.h4`
-margin-top: 6.5%;
+export const cartIcon = styled(FaCartPlus)`
+ width: 25px;
+ height: 25px;
+ position: relative;
+ filter: brightness(0) saturate(100%) invert(32%) sepia(70%) saturate(5991%) hue-rotate(258deg) brightness(102%) contrast(96%);
 `
-export const CartContainer = styled.div`
-text-align: center;
-height:100vh;
-width: 300px;
-/* margin-left: 600px; */
-border-radius: 10px;
-z-index: 1;
-background-color: #1C1C1C;
+
+export const carIconBtn = styled.button `
+  background: none;
+  border: none;
+`
+
+export const userPrice = styled.h3`
+font-size: 30px;
+color: white;
 `

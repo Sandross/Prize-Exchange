@@ -11,7 +11,7 @@ export default function ProductCard ({ title, price, thumbnail, shipping, id  })
             <img src={thumbnail.replace('I.jpg', 'J.jpg')} alt={title} />
           </S.ProductImage>
            <ProductInfo 
-             price={price}
+            price={price}
             title={title}
             thumbnail={thumbnail}
             shipping={shipping.free_shipping} 

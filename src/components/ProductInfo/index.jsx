@@ -1,16 +1,18 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import * as S from './styles';
-import { addItens } from '../../store/reducers'
+import { addItems, updateTotal } from '../../store/reducers';
 
 const ProductInfo = ({ price, shipping, title, thumbnail, id }) => {
   const dispatch = useDispatch();
+
   const addToCart = (id, title, price, thumbnail) => {
-    dispatch(addItens({
+    dispatch(addItems({
       id,
       title,
       price,
       thumbnail,
-    }));
+    }))
+    dispatch(updateTotal());
   }
   return (
     <S.ProductInfosContainer>

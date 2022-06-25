@@ -39,3 +39,4 @@ export const ProductImage = styled.div`
     transform: scale(1.1);
   }
 `;
+

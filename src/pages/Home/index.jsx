@@ -1,14 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-// import { addItens } from '../../store/reducers';
+// import { addItems } from '../../store/reducers';
 import ProductCard from '../../components/ProductCard';
 import  Header  from '../../components/Header';
 import * as S from './styles';
 
 export default function Home() {
   const { products } = useSelector((state) => state.radarFit);
-  // const dispatch = useDispatch();
-  console.log(products);
   return (
     <>
    <Header/>
