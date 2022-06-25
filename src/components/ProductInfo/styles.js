@@ -42,7 +42,7 @@ export const ProductFreeShipping = styled.p`
 `;
 
 export const ButtonCart = styled.button`
-  background:  #03a752;
+  background:#A356FB;
   color: white;
   border: none;
   border-radius: 5px;

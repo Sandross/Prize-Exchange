@@ -5,6 +5,7 @@ import ProductInfo from '../ProductInfo/index';
 export default function ProductCard ({ title, price, thumbnail, shipping, _id  })  
 {
     return (
+      <div>
         <S.ProductCardContainer>
           <S.ProductImage>
             <img src={thumbnail.replace('I.jpg', 'J.jpg')} alt={title} />
@@ -15,5 +16,6 @@ export default function ProductCard ({ title, price, thumbnail, shipping, _id  }
             shipping={shipping.free_shipping} 
            /> 
         </S.ProductCardContainer>
+        </div>
     );
 };

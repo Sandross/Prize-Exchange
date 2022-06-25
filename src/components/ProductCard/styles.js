@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+
 
 export const ProductCardContainer = styled.div`
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 290px;
-  height: 530px;
+  width: 267px;
+  height: 300px;
   margin: 10px;
   border-radius: 8px;
   box-shadow: 0 0 2px 1px rgba(199, 197, 197, 0.739);

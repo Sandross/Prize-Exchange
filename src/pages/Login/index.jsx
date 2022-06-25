@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form'
 import { schema } from './validation'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { saveOnLocalStorage } from '../../utils'
+import * as S from './styles';
+
 
 export default function Login() {
   const { handleSubmit, register, formState: {errors} } = useForm({
@@ -11,17 +14,17 @@ export default function Login() {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <div>
-        <h2>Login</h2>
-        {errors.email && <p>{errors.email.message}</p>}
-        { errors.password && <p>{errors.password.message}</p>}
-        <form
+    <S.ProductCardContainer>
+      <S.SecondProduct>
+        <S.ProductTitle>Login</S.ProductTitle>
+        <S.ProductForm
         onSubmit={ handleSubmit((data) => 
-            navigate('/home'))}
+         { console.log(data)
+           saveOnLocalStorage('user',data)
+            navigate('/home')})}
         >
           <div>
-            <input
+            <S.ProductInput
               data-testid="email-input"
               type="email"
               placeholder="Email"
@@ -29,7 +32,8 @@ export default function Login() {
               ...register('email')
               }
             />
-            <input
+            <br/>
+            <S.ProductInput
               data-testid="password-input"
               type="password"
               placeholder="Senha"
@@ -38,15 +42,17 @@ export default function Login() {
               }
             />
           </div>
-          <button
+          <S.Productbuttom
             data-testid="login-submit-btn"
             type="submit"
           >
             Entrar
 
-          </button>
-        </form>
-      </div>
-    </div>
+          </S.Productbuttom>
+          {errors.email && <p>{errors.email.message}</p>}
+        { errors.password && <p>{errors.password.message}</p>}
+        </S.ProductForm>
+      </S.SecondProduct>
+    </S.ProductCardContainer>
   );
 }

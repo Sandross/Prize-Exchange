@@ -1,23 +1,25 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import { addItens } from '../../store/reducers'
+import React from 'react';
+import { useSelector } from 'react-redux';
+// import { addItens } from '../../store/reducers';
 import ProductCard from '../../components/ProductCard';
-import  Header  from '../../components/Header'
+import  Header  from '../../components/Header';
+import * as S from './styles';
 
 export default function Home() {
-  const { products } = useSelector((state) => state.radarFit)
-  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.radarFit);
+  // const dispatch = useDispatch();
+  console.log(products);
   return (
     <>
    <Header/>
-    <div>
+    <S.DivContainer>
     { products.map(product => (<ProductCard key={product.id}{...product} />) )}
-      <button onClick={() => dispatch( addItens({
+      {/* <button onClick={() => dispatch( addItens({
         name: 'cassius',
         id: 171,
         price: 0,
-      }))}></button>
-    </div>
+      }))}></button> */}
+    </S.DivContainer>
     </>
   )
 }
