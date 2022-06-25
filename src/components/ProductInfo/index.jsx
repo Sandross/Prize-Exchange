@@ -1,11 +1,17 @@
-import React from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import * as S from './styles';
+import { addItens } from '../../store/reducers'
 
-const ProductInfo = ({ price, shipping, title }) => {
-  // const { isCartOpen } = useSelector((state) => state.radarFit);
-  // console.log(isCartOpen);
-
+const ProductInfo = ({ price, shipping, title, thumbnail, id }) => {
+  const dispatch = useDispatch();
+  const addToCart = (id, title, price, thumbnail) => {
+    dispatch(addItens({
+      id,
+      title,
+      price,
+      thumbnail,
+    }));
+  }
   return (
     <S.ProductInfosContainer>
       <S.ProductPrice>
@@ -18,7 +24,7 @@ const ProductInfo = ({ price, shipping, title }) => {
       <S.ProductTitle>
         <p>{title}</p>
       </S.ProductTitle>
-      <S.ButtonCart>Adicionar ao Carrinho</S.ButtonCart>
+      <S.ButtonCart onClick={() => addToCart(id, title, price, thumbnail)}>Adicionar ao Carrinho</S.ButtonCart>
     </S.ProductInfosContainer>
   );
 };

@@ -14,7 +14,7 @@ const radarFitSlice = createSlice({
             prevState.cartItens.push(action.payload)
         },
         openCart: (state, action) => {
-           state.isCartOpen.push(action.payload);
+          return {...state, isCartOpen: action.payload}
         }
     }
 })

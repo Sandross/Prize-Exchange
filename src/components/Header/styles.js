@@ -26,4 +26,12 @@ export const cartIcon = styled(FaCartPlus)`
 export const UserLogged = styled.h4`
 margin-top: 6.5%;
 `
-
+export const CartContainer = styled.div`
+text-align: center;
+height:100vh;
+width: 300px;
+/* margin-left: 600px; */
+border-radius: 10px;
+z-index: 1;
+background-color: #1C1C1C;
+`

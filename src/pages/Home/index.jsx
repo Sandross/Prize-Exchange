@@ -14,11 +14,6 @@ export default function Home() {
    <Header/>
     <S.DivContainer>
     { products.map(product => (<ProductCard key={product.id}{...product} />) )}
-      {/* <button onClick={() => dispatch( addItens({
-        name: 'cassius',
-        id: 171,
-        price: 0,
-      }))}></button> */}
     </S.DivContainer>
     </>
   )
