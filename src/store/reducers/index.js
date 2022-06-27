@@ -5,7 +5,7 @@ const radarFitSlice = createSlice({
   name: 'radarFit',
   initialState: {
     isCartOpen: false,
-    wallet: 1200,
+    wallet: 120000,
     products,
     total: 0,
     cartItems: [],
@@ -58,10 +58,15 @@ const radarFitSlice = createSlice({
       const newValue = state.cartItems.reduce((acc, value) => acc + value.price * value.qty, 0);
       return { ...state, total: newValue };
     },
+    finishBuy: (state) => {
+      const newWallet = state.wallet - state.total;
+      return { ...state, wallet: newWallet, cartItems: [] };
+    },
   },
 });
 
 export const {
   openCart, addItems, removeItem, updateTotal, decrementQty, incrementQty,
+  finishBuy,
 } = radarFitSlice.actions;
 export default radarFitSlice.reducer;

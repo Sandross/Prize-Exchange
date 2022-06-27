@@ -2,11 +2,12 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   removeItem, updateTotal, decrementQty, incrementQty,
+  finishBuy,
 } from '../../store/reducers';
 import * as S from './styles';
 
 export default function CartItems() {
-  const { cartItems, total } = useSelector((state) => state?.radarFit);
+  const { cartItems, total, wallet } = useSelector((state) => state?.radarFit);
   const dispatch = useDispatch();
 
   return (
@@ -23,7 +24,7 @@ export default function CartItems() {
             <S.CartItemsTitle>{elem.title}</S.CartItemsTitle>
 
             <S.CartItemTools>
-              <S.CartItemsPrice>{elem.price && `R$ ${(elem.price * elem.qty).toFixed(2)}`}</S.CartItemsPrice>
+              <S.CartItemsPrice>{elem.price && `RadarFit$ ${(elem.price * elem.qty).toFixed(2)}`}</S.CartItemsPrice>
               <div>
                 <S.moreLessBtns onClick={() => {
                   dispatch(decrementQty(elem));
@@ -54,7 +55,16 @@ export default function CartItems() {
           </S.CartItemCard>
         ))
 }
+      <S.IconBtn
+        type="button"
+        onClick={() => {
+          if (wallet > 0) dispatch(finishBuy(total.toFixed(2)));
+          else if (wallet <= 0 || total > wallet) alert('Você não tem saldo suficiente!');
+        }}
+      >
+        Finalizar compra
 
+      </S.IconBtn>
       {!cartItems.length && <h3>Carrinho vazio</h3>}
     </S.CartItemsContainer>
   );

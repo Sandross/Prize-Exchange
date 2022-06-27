@@ -8,7 +8,7 @@ import CartItems from '../CartItems';
 export default function Header() {
   const [email, setEmail] = useState('');
   const dispatch = useDispatch();
-  const { isCartOpen } = useSelector((state) => state?.radarFit);
+  const { isCartOpen, wallet } = useSelector((state) => state?.radarFit);
   useEffect(() => {
     const user = getLocalStorage('user');
     if (user?.email) {
@@ -23,6 +23,9 @@ export default function Header() {
         <h4>
           { `Logado como ${email}` }
         </h4>
+        <p>
+          {`Seu saldo: RadarFit$ ${wallet.toFixed(2)}`}
+        </p>
       </nav>
       <S.carIconBtn onClick={() => {
         if (isCartOpen) {

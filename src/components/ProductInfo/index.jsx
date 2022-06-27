@@ -21,10 +21,7 @@ function ProductInfo({
   return (
     <S.ProductInfosContainer>
       <S.ProductPrice>
-        {price?.toLocaleString('pt-br', {
-          style: 'currency',
-          currency: 'BRL',
-        })}
+        {`RadarFit$: ${price?.toFixed(2)}`}
       </S.ProductPrice>
       {shipping && <S.ProductFreeShipping>Frete grátis</S.ProductFreeShipping>}
       <S.ProductTitle>
