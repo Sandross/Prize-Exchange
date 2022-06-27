@@ -13,7 +13,7 @@ export default function CartItems() {
   return (
     <S.CartItemsContainer>
 
-      <h2>{`Total: ${total.toFixed(2)}`}</h2>
+      <h2>{`Total RadarFit$: ${total.toFixed(2)}`}</h2>
 
       {
         cartItems?.map((elem) => (
@@ -60,6 +60,7 @@ export default function CartItems() {
         onClick={() => {
           if (wallet > 0) dispatch(finishBuy(total.toFixed(2)));
           else if (wallet <= 0 || total > wallet) alert('Você não tem saldo suficiente!');
+          dispatch(updateTotal());
         }}
       >
         Finalizar compra
